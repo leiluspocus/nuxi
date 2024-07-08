@@ -16,6 +16,7 @@
     "@pinia/nuxt": "^0.5.1",
     "@supabase/supabase-js": "^2.42.1",
     "leaflet": "^1.9.4",
+    "@vue-leaflet/vue-leaflet": "^0.6.1",
     "nuxt": "^3.11.2",
     "pinia": "^2.1.7",
     "tailwindcss": "^3.4.3",
@@ -24,7 +25,6 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.11.4",
-    "nuxt3-leaflet": "^1.0.12"
+    "@nuxtjs/tailwindcss": "^6.11.4"
   }
 }

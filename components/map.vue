@@ -1,38 +1,37 @@
 <script setup lang="ts">
+  import 'leaflet/dist/leaflet.css';
+  import { MapPinIcon } from '@heroicons/vue/24/outline'
+  import { LMap, LTileLayer } from '@vue-leaflet/vue-leaflet';
+
   const isLoadingGetCurrentPosition = ref(true)
 </script>
 
 <template>
-<client-only>
-  <div>
-    {{ isLoadingGetCurrentPosition }}
-    <LMap
-      ref="map"
-      :zoom="12"
-      :center="[48.856613, 2.352222]"
-    >
-      <LTileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution="&amp;copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors"
-        layer-type="base"
-        name="OpenStreetMap"
-      />
-    </LMap>
-    <div id="localisation">
-      <button
-        v-if="!isLoadingGetCurrentPosition"
-        class="block rounded-full bg-green-800 hover:text-white focus:outline-none"
-      >
-        <MapPinIcon class="h-8 w-8 text-white block" aria-hidden="true" />
-      </button>
-      <span v-if="isLoadingGetCurrentPosition">En chargement ...</span>
+    <div>
+      <div id="map">
+        <l-map
+          ref="map"
+          :zoom="12"
+          :center="[48.856613, 2.352222]"
+        >
+          <l-tile-layer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution="&amp;copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors"
+            layer-type="base"
+            name="OpenStreetMap"
+          />
+        </l-map>
+      </div>
+      <div id="localisation">
+        <button
+          v-if="!isLoadingGetCurrentPosition"
+          class="block rounded-full bg-green-800 hover:text-white focus:outline-none"
+        >
+          <map-pin-icon class="h-8 w-8 text-white block" aria-hidden="true" />
+        </button>
+        <span v-if="isLoadingGetCurrentPosition">En chargement ...</span>
+      </div>
     </div>
-  </div>
-  </client-only>
-  <template #fallback>
-    <!-- this will be rendered on server side -->
-    <p>Loading map...</p>
-  </template>
 </template>
 
 <style scoped>
