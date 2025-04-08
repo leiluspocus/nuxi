@@ -2,9 +2,9 @@
 import { GeocoderAutocomplete } from '@geoapify/geocoder-autocomplete'
 import { ref, onMounted } from 'vue'
 import { insertSpot } from '../api/spots'
-import SpotsAutocomplete from '../organisms/SpotsAutocomplete.vue'
-import SuccessNotification from '../molecules/SuccessNotification.vue'
-import ErrorNotification from '../molecules/ErrorNotification.vue'
+import SpotsAutocomplete from '../components/SpotsAutocomplete.vue'
+import Success from '../components/notifications/success.vue'
+import Error from '../components/notifications/error.vue'
 
 let newProposal = ref({})
 const friendlyStaff = ref(false)
@@ -177,11 +177,11 @@ const submitForm = async (e) => {
         </svg>
         Loading...
       </button>
-      <success-notification
+      <success
         :msg="'Merci pour votre suggestion, nous l\'avons bien reçu! Elle sera traitée prochainement :)'"
         :success="success"
       />
-      <error-notification :msg="'Erreur à la soumission'" :error="error" />
+      <error :msg="'Erreur à la soumission'" :error="error" />
     </div>
   </form>
 </template>
