@@ -2,6 +2,10 @@
   import Map from '../components/map.vue'
   import List from '../components/list.vue'
 
+  definePageMeta({
+    layout: 'default'
+  })
+  
   useSeoMeta({
     title: 'Où sortir avec mon bébé ?'
   });
@@ -21,12 +25,7 @@
 </script>
 <template>
   <div>
-    <header>
-      <HeaderNavigation />
-    </header>
-    <div class="content">
-      <toggle-map-list @toggleDisplay="toggleDisplay" />
-  	  <component :is="showMap? Map : List" :spots="spots"></component>
-    </div>
+    <toggle-map-list @toggleDisplay="toggleDisplay" />
+    <component :is="showMap? Map : List" :spots="spots"></component>
   </div>
 </template>

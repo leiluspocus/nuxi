@@ -44,14 +44,14 @@ const submitForm = async (e) => {
   <form class="px-4 pb-4 content content-with-text">
     <div class="space-y-12">
       <div class="border-b border-gray-900/10 pb-12">
-        <h1 class="text-base font-semibold leading-7 text-gray-900 mt-3 dark:text-white">
+        <h1 class="text-base font-semibold leading-7 text-gray-900 mt-3">
           Proposer un endroit "bébé-friendly"
         </h1>
         <div class="mt-3 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="col-span-full">
             <label
               for="street-address"
-              class="block text-sm font-medium leading-6 text-gray-900 dark:text-gray-400"
+              class="block text-sm font-medium leading-6 text-gray-900"
               >Nom et adresse du lieu que vous recommandez ?</label
             >
             <div class="mt-2">
@@ -63,7 +63,7 @@ const submitForm = async (e) => {
       <div class="border-b border-gray-900/10 pb-12">
         <div class="mt-10 space-y-10">
           <fieldset>
-            <legend class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">
+            <legend class="text-sm font-semibold leading-6 text-gray-900">
               Les plus "Bébé Friendly"
             </legend>
             <div class="mt-6 space-y-6">
@@ -76,7 +76,7 @@ const submitForm = async (e) => {
                   />
                 </div>
                 <div class="text-sm leading-6">
-                  <label for="comments" class="font-medium text-gray-900 dark:text-gray-400"
+                  <label for="comments" class="font-medium text-gray-900"
                     >Table à langer</label
                   >
                   <p class="text-gray-500">Y a-t-il de quoi changer les p'tits bouts ?</p>
@@ -91,7 +91,7 @@ const submitForm = async (e) => {
                   />
                 </div>
                 <div class="text-sm leading-6">
-                  <label for="candidates" class="font-medium text-gray-900 dark:text-gray-400"
+                  <label for="candidates" class="font-medium text-gray-900"
                     >Accès pousettes</label
                   >
                   <p class="text-gray-500">
@@ -108,7 +108,7 @@ const submitForm = async (e) => {
                   />
                 </div>
                 <div class="text-sm leading-6">
-                  <label for="offers" class="font-medium text-gray-900 dark:text-gray-400"
+                  <label for="offers" class="font-medium text-gray-900"
                     >Staff bienveillant</label
                   >
                   <p class="text-gray-500">
@@ -122,7 +122,7 @@ const submitForm = async (e) => {
             <div class="mt-8 col-span-full">
               <label
                 for="feedback"
-                class="block text-sm font-medium leading-6 text-gray-900 dark:text-white"
+                class="block text-sm font-medium leading-6 text-gray-900"
                 >Votre opinion</label
               >
               <div class="mt-2">
@@ -161,7 +161,7 @@ const submitForm = async (e) => {
         <svg
           aria-hidden="true"
           role="status"
-          class="inline w-4 h-4 me-3 text-gray-200 animate-spin dark:text-gray-600"
+          class="inline w-4 h-4 me-3 text-gray-200 animate-spin"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
