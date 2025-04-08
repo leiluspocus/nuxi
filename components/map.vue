@@ -3,7 +3,7 @@
   import { MapPinIcon } from '@heroicons/vue/24/outline'
   import { LMap, LTileLayer } from '@vue-leaflet/vue-leaflet';
 
-  const isLoadingGetCurrentPosition = ref(true)
+  const isLoadingGetCurrentPosition = ref(false)
 </script>
 
 <template>

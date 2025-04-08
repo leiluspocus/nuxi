@@ -2,17 +2,21 @@
   import Map from '../components/map.vue'
   import List from '../components/list.vue'
 
-   const store = useSpotsStore()
-    const { gSpots } = store
-    const { spots, nb, currentLocation } = storeToRefs(store)
+  useSeoMeta({
+    title: 'Où sortir avec mon bébé ?'
+  });
 
-    let showMap = ref(true)
+  const store = useSpotsStore()
+  const { gSpots } = store
+  const { spots, nb, currentLocation } = storeToRefs(store)
 
-    await useAsyncData('spots', gSpots)
+  let showMap = ref(true)
 
-    const toggleDisplay = (mode) => {
-      showMap.value = mode === 'map'
-    };
+  await useAsyncData('spots', gSpots)
+
+  const toggleDisplay = (mode) => {
+    showMap.value = mode === 'map'
+  };
 
 </script>
 <template>

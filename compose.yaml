@@ -12,9 +12,13 @@ services:
       - DATABASE_USER=postgres
       - DATABASE_PASSWORD=postgres
       - DATABASE_NAME=nuxtdb
+    command: "npm run dev"
     depends_on:
       - db
     restart: unless-stopped
+    volumes:
+      - ./:/app # Pour que quand tu mets à jour le code via ton IDE, ça mette à jour le code sur ton container
+      - /app/node_modules # Empêcher le dossier node_modules d'être supprimé
 
   db:
     image: postgres:14-alpine

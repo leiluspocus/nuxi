@@ -19,5 +19,17 @@ export default defineNuxtConfig({
       SUPABASE_KEY: process.env.SUPABASE_KEY,
       AUTOCOMPLETE_KEY: process.env.AUTOCOMPLETE_KEY,
     }
-  }
+  },
+  vite: {
+    server: {
+      watch: {
+        usePolling: true,
+      },
+      hmr: {
+        protocol: 'ws',
+        host: 'localhost',
+        port: 24679, 
+      },
+    },
+  },
 })
