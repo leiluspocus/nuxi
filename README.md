@@ -1,39 +1,55 @@
-# Nuxi
+[![AGPLv3 License](https://img.shields.io/badge/License-AGPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+# Où sortir avec mon bébé ? 👶🏽
 
-Make sure to install the dependencies:
+_Où sortir avec mon bébé ?_ est une application permettant de repérer les endroits faciles d'accès avec des tous petits: cafés, lieux insolites ...
 
-```bash
-# yarn
-yarn install
-```
+Notre objectif est de donner des idées d'activités parent-enfant à réaliser près de chez soi !
 
-## Development Server
+[Proposez des endroits dès maintenant 🎲](https://ousortiravecmonbebe.com/proposer-un-lieu)
+## Demo
 
-Start the development server on `http://localhost:3000`:
+[Le site est accessible en live ici](https://www.ousortiravecmonbebe.com)
 
-```bash
-# yarn
-yarn dev
-```
 
-## Production
+## Installation
 
-Build the application for production:
+**Prérequis**: [Node.js](https://nodejs.org/fr/download), [Npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+Pour exécuter le projet en local
 
 ```bash
-# yarn
-yarn build
+git clone https://github.com/leiluspocus/ousortiravecmonbebe.git
+cd ousortiravecmonbebe
+npm i
+npm run dev
 ```
 
-Locally preview production build:
+## Feedbacks
 
-```bash
-# yarn
-yarn preview
-```
+Tous les retours et suggestions sont fortement appréciées ! Vous pouvez nous envoyer un mail à contact@ousortiravecmonbebe.com
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Contribuer
+
+Si vous êtes développeur ou développeuse, les issues sont [par ici](https://github.com/leiluspocus/ousortiravecmonbebe/issues).
+
+Vous pouvez également contribuer en déclarant des bugs [via les issues Github](https://github.com/leiluspocus/ousortiravecmonbebe/issues) ou par mail à contact@ousortiravecmonbebe.com
+## Stack
+
+**Client:** Vue 3, Vite, TailwindCSS
+
+**Server:** Supabase, _(Incoming) Node, Express_
+
+**CI/CD:** Github Actions, Github Pages
+
+## Créatrice
+
+- [@leiluspocus](https://www.github.com/leiluspocus)
+
+
+## License
+
+[GNU AGPLv3](https://choosealicense.com/licenses/agpl-3.0/)
+
