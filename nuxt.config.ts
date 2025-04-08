@@ -8,6 +8,12 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['./stores/**']
   },
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
   tailwindcss: {
     exposeConfig: true,
     viewer: true,

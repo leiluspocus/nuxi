@@ -1,13 +1,10 @@
 <template>
   <div>
     <header>
-      <HeaderNavigation />
+      <Navigation />
     </header>
     <div>
         <slot />
     </div>
-    <footer>
-      <p>(c) OSAMB</p>
-    </footer>
   </div>
 </template>
