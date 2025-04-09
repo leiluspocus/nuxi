@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia'
-import { type Spot } from '../types/Spot'
 import { getSpots } from '../api/spots'
 import { type GeolocationCoordinates } from '../types/GeolocationCoordinates'
 

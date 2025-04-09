@@ -26,6 +26,6 @@
 <template>
   <div>
     <toggle-map-list @toggleDisplay="toggleDisplay" />
-    <component :is="showMap? Map : List" :spots="spots"></component>
+    <component :is="showMap ? Map : List" :spots="spots"></component>
   </div>
 </template>
