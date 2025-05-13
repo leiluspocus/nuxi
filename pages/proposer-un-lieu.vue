@@ -32,7 +32,8 @@ const submitForm = async (e) => {
     city: value.city,
     stroller_access: pmrAccess.value,
     changing_table: diaperFacilities.value,
-    friendly_staff: friendlyStaff.value
+    friendly_staff: friendlyStaff.value,
+    feedback: feedback.value,
   })
   success.value = res
   error.value = !res
