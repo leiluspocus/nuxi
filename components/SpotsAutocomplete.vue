@@ -6,6 +6,9 @@ const props = defineProps({
   newProposal: Object
 })
 
+defineEmits(['valueSelected'])
+const runtimeConfig = useRuntimeConfig();
+
 const autoloaderInProgress = ref(false)
 const suggestions = ref([])
 
@@ -17,7 +20,7 @@ const fetchSuggestions = async (e) => {
       `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(
         e.target.value
       )}&type=amenity&filter=countrycode:fr&limit=5&apiKey=${
-        import.meta.env.VITE_AUTOCOMPLETE_KEY
+        runtimeConfig.public.AUTOCOMPLETE_KEY
       }`,
       { limit: 5 }
     )
@@ -26,6 +29,7 @@ const fetchSuggestions = async (e) => {
     for (const item of features) {
       suggestions.value = [...suggestions.value, item.properties]
     }
+    console.log(suggestions.value)
     autoloaderInProgress.value = false
   }
 }
@@ -72,7 +76,7 @@ const fetchSuggestions = async (e) => {
   background-color: #fff;
 
   z-index: 99;
-  top: calc(100% + 2px);
+  /*top: calc(100% + 2px);*/
   left: 0;
   right: 0;
 }
