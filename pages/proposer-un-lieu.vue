@@ -6,6 +6,14 @@ import SpotsAutocomplete from '../components/SpotsAutocomplete.vue'
 import Success from '../components/notifications/success.vue'
 import Error from '../components/notifications/error.vue'
 
+useSeoMeta({
+  title: 'Proposer un lieu - Où sortir avec mon bébé ?',
+  ogTitle: 'Proposer un lieu - Où sortir avec mon bébé ?',
+  description: 'Trouver un endroit où sortir avec son bébé n\'est pas toujours facile. Proposez-nous un lieu que vous aimez et qui est adapté aux tous petits !',
+  ogDescription: 'Trouver un endroit où sortir avec son bébé n\'est pas toujours facile. Proposez-nous un lieu que vous aimez et qui est adapté aux tous petits !',
+  ogImage: '',
+})
+
 let newProposal = ref({})
 const friendlyStaff = ref(false)
 const diaperFacilities = ref(false)

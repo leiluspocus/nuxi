@@ -49,7 +49,7 @@ const fetchSuggestions = async (e) => {
     class="autocomplete-container block w-full p-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
   />
 
-  <div v-show="inputFocused && suggestions.length === 0 && autoloaderInProgress" class="autocomplete-items">En cours !</div>
+  <div v-show="inputFocused && suggestions.length === 0 && autoloaderInProgress" class="autocomplete-items">Recherche en cours...</div>
   <div v-show="inputFocused && suggestions.length === 0 && !autoloaderInProgress" class="autocomplete-items">Aucun résultat trouvé</div>
   <div v-show="suggestions.length > 0" class="autocomplete-items">
     <div

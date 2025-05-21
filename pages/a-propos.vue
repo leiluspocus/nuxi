@@ -1,3 +1,12 @@
+<script setup>
+  useSeoMeta({
+    title: 'A propos - Où sortir avec mon bébé ?',
+    ogTitle: 'A propos - Où sortir avec mon bébé ?',
+    description: 'Trouver un endroit où sortir avec son bébé ne devrait pas être compliqué.',
+    ogDescription: 'Trouver un endroit où sortir avec son bébé ne devrait pas être compliqué.',
+    ogImage: '',
+  })
+</script>
 <template>
   <div class="about px-4 pb-4 content content-with-text pt-4">
     <h1 class="font-bold mb-2">A propos</h1>
