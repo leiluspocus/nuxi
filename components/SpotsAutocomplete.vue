@@ -11,9 +11,11 @@ const runtimeConfig = useRuntimeConfig();
 
 const autoloaderInProgress = ref(false)
 const suggestions = ref([])
+const inputFocused = ref(false)
 
 const fetchSuggestions = async (e) => {
   suggestions.value = []
+  inputFocused.value = true
   if (!autoloaderInProgress.value) {
     autoloaderInProgress.value = true
     const response = await fetch(
@@ -42,8 +44,13 @@ const fetchSuggestions = async (e) => {
     placeholder="Tapez le nom et/ou l'adresse ..."
     v-model="newProposal.formatted"
     @input="fetchSuggestions"
+    @blur="inputFocused = false"
+    @focus="inputFocused = true"
     class="autocomplete-container block w-full p-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
   />
+
+  <div v-show="inputFocused && suggestions.length === 0 && autoloaderInProgress" class="autocomplete-items">En cours !</div>
+  <div v-show="inputFocused && suggestions.length === 0 && !autoloaderInProgress" class="autocomplete-items">Aucun résultat trouvé</div>
   <div v-show="suggestions.length > 0" class="autocomplete-items">
     <div
       :key="index"
