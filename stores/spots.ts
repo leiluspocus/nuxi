@@ -9,7 +9,6 @@ export const useSpotsStore = defineStore('appStore', () => {
   async function gSpots() {
     nb.value = 42
     spots.value = await $fetch('/api/spots')
-    console.log(spots.value, '<< debug')
   }
 
   function storeLocation(position: GeolocationCoordinates) {
