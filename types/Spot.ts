@@ -8,5 +8,4 @@ export type Spot = {
   city: string
   stroller_access: boolean
   changing_table: boolean
-  friendly_staff: boolean
 }

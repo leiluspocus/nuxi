@@ -13,6 +13,7 @@
   const store = useSpotsStore()
   const { gSpots } = store
   const { spots, nb, currentLocation } = storeToRefs(store)
+  console.log(spots);
 
   let showMap = ref(true)
 
