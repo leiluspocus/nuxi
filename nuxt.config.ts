@@ -20,9 +20,8 @@ export default defineNuxtConfig({
     // and more...
   },
   runtimeConfig: {
+    databaseUrl: process.env.DATABASE_URL || '',
     public: {
-      SUPABASE_HOST: process.env.SUPABASE_HOST,
-      SUPABASE_KEY: process.env.SUPABASE_KEY,
       AUTOCOMPLETE_KEY: process.env.AUTOCOMPLETE_KEY,
     }
   },

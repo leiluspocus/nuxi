@@ -1,7 +1,6 @@
 <script setup>
 import { GeocoderAutocomplete } from '@geoapify/geocoder-autocomplete'
 import { ref, onMounted } from 'vue'
-import { insertSpot } from '../api/spots'
 import SpotsAutocomplete from '../components/SpotsAutocomplete.vue'
 import Success from '../components/notifications/success.vue'
 import Error from '../components/notifications/error.vue'
@@ -31,20 +30,26 @@ const submitForm = async (e) => {
   event.preventDefault()
   const { value } = newProposal
   isSubmissionLoading.value = true
-  const res = await insertSpot({
-    name: value.name,
-    address: value.address_line2,
-    lat: value.lat,
-    lng: value.lon,
-    postal_code: value.postcode,
-    city: value.city,
-    stroller_access: pmrAccess.value,
-    changing_table: diaperFacilities.value,
-    friendly_staff: friendlyStaff.value,
-    feedback: feedback.value,
-  })
-  success.value = res
-  error.value = !res
+  try {
+    await $fetch('/api/spots', {
+      method: 'POST',
+      body: {
+        name: value.name,
+        address: value.address_line2,
+        lat: value.lat,
+        lng: value.lon,
+        postal_code: value.postcode,
+        city: value.city,
+        stroller_access: pmrAccess.value,
+        changing_table: diaperFacilities.value
+      },
+    })
+    success.value = true
+    error.value = false
+  } catch {
+    success.value = false
+    error.value = true
+  }
   isSubmissionLoading.value = false
   setTimeout(() => (success.value = false), 5000)
 }

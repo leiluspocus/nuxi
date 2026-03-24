@@ -40,7 +40,7 @@ Vous pouvez également contribuer en déclarant des bugs [via les issues Github]
 
 **Client:** Vue 3, Vite, TailwindCSS
 
-**Server:** Supabase, _(Incoming) Node, Express_
+**Server:** Neon (PostgreSQL), Nuxt API routes
 
 **CI/CD:** Github Actions, Github Pages
 
