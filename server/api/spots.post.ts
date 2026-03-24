@@ -2,7 +2,7 @@ import { neon } from '@neondatabase/serverless'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
-  const { databaseUrl } = useRuntimeConfig()
+  const databaseUrl = process.env.DATABASE_URL || useRuntimeConfig().databaseUrl
   if (!databaseUrl) {
     throw createError({ statusCode: 500, message: 'DATABASE_URL non configurée' })
   }

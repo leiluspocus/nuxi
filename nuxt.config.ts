@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     // and more...
   },
   runtimeConfig: {
-    databaseUrl: process.env.DATABASE_URL || '',
+    databaseUrl: '',
     public: {
       AUTOCOMPLETE_KEY: process.env.AUTOCOMPLETE_KEY,
     }

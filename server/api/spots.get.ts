@@ -1,7 +1,7 @@
 import { neon } from '@neondatabase/serverless'
 
 export default defineEventHandler(async () => {
-  const { databaseUrl } = useRuntimeConfig()
+  const databaseUrl = process.env.DATABASE_URL || useRuntimeConfig().databaseUrl
   if (!databaseUrl) {
     console.error('[spots.get] DATABASE_URL non configurée')
     return []
